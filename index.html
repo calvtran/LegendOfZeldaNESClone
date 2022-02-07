@@ -1,12 +1,25 @@
-<html>
-
-<h1>The Portfolio of Calvin Tran</h1>
-
-<h2>Projects</h2>
-
-
-<ul>
-    <li><a href="https://cdn.destructoid.com//ul/317824-zelda%20memes.jpg">The Legend of Zelda (Unity Remaster)</a></li>
-</ul>
-
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Legend Of Zelda NES (Clone)</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=768 height=720 style="width: 768px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/WebBuild.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/WebBuild.data.unityweb",
+        frameworkUrl: "Build/WebBuild.framework.js.unityweb",
+        codeUrl: "Build/WebBuild.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Legend Of Zelda NES (Clone)",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
 </html>
